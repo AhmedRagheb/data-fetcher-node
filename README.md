@@ -55,4 +55,3 @@ npm run test
 - Schema validation.
 - Open api or Swagger.
 - Logging should be saved somewhere else.
-- .env file and config per environment.
