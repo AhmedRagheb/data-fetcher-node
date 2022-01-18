@@ -33,7 +33,7 @@ You can run the following with `npm run ...`:
 
 - `build`: builds the project using TypeScript, output will be in the `dist` folder;
 - `start`: starts the server in development mode, automatically reloading when code changes;
-- `test`: runs tests in watch mode using Jest;
+- `test`: runs tests in watch mode using Jest and you need to update setEnvVars with Mongo server;
 - `format`: formats all code using [Prettier](https://github.com/prettier/prettier)
 
 ## Formatting
