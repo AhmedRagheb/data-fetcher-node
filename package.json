@@ -20,7 +20,8 @@
     "supertest": "4.0.2",
     "ts-jest": "26.1.0",
     "ts-node-dev": "1.0.0-pre.44",
-    "typescript": "3.9.4"
+    "typescript": "3.9.4",
+    "dotenv": "^8.2.0"
   },
   "dependencies": {
     "express": "4.17.1",
