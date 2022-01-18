@@ -8,6 +8,7 @@ import { TYPES } from './config/types';
 import DataFetcherRoutes from './routes/data-fetcher-routes';
 import Logger from './logging/logger';
 import DbConnect from './config/db-connect';
+import * as dotenv from 'dotenv';
 
 /**
  * A small wrapper around an express server.
@@ -31,6 +32,8 @@ class Server {
     this.app.use(notFoundHandler);
     this.app.use(errorHandler);
 
+    dotenv.config({ path: '.env' });  
+      
     DbConnect.connect();
   }
 
