@@ -1,23 +1,25 @@
-import MongoMemoryServer from 'mongodb-memory-server-core/lib/MongoMemoryServer';
-import DbConnect from '../config/db-connect';
+import { MongoMemoryServer } from 'mongodb-memory-server';
+import mongoose from 'mongoose';
+
+const mongod = new MongoMemoryServer();
 
 export class DbMock {
-    public static mongod: MongoMemoryServer;
-
     public static async initDbMock() {
-        DbMock.mongod = new MongoMemoryServer({
-            instance: {
-                port: 8080,
-            },
-        });
+        const uri = await mongod.getUri();
 
-        await DbConnect.connect();
+        const mongooseOpts = {
+            useNewUrlParser: true,
+            useCreateIndex: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false,
+        };
 
-        return DbMock.mongod;
+        await mongoose.connect(uri, mongooseOpts);
+
+        return mongod;
     }
 
     public static async stopDbMock() {
-        await DbConnect.disconnect();
-        await DbMock.mongod.stop();
+        await mongod.stop();
     }
 }
