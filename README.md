@@ -51,7 +51,6 @@ npm run test
 
 ## TODO
 
-- Proper testing for respository layer.
 - User name and password shouldn't be in the code, they should be saved in secret manager or vault or ..
 - Schema validation.
 - Open api or Swagger.
