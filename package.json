@@ -1,0 +1,32 @@
+{
+  "name": "getir",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project .",
+    "start": "ts-node-dev src/index.ts --watch src/",
+    "test": "jest --watch",
+    "format": "prettier --config .prettierrc --write ./test/**/* ./src/**/* ./src/*"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.2",
+    "@types/jest": "^26.0.1",
+    "@types/supertest": "2.0.8",
+    "jest": "26.1.0",
+    "mongodb-memory-server-core": "~5.1.0",
+    "prettier": "1.19.1",
+    "supertest": "4.0.2",
+    "ts-jest": "26.1.0",
+    "ts-node-dev": "1.0.0-pre.44",
+    "typescript": "3.9.4"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "express-promise-router": "3.0.3",
+    "inversify": "^5.1.1",
+    "mongoose": "^6.1.6",
+    "reflect-metadata": "^0.1.13"
+  }
+}
