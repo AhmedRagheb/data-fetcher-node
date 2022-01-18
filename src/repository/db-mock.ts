@@ -12,7 +12,6 @@ export class DbMock {
             },
         });
 
-        await DbMock.mongod.getUri();
         await DbConnect.connect();
 
         return DbMock.mongod;
