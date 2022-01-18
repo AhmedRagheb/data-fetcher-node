@@ -7,7 +7,6 @@ export class DbMock {
     public static async initDbMock() {
         DbMock.mongod = new MongoMemoryServer({
             instance: {
-                dbName: 'test-db',
                 port: 8080,
             },
         });
