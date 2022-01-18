@@ -6,6 +6,8 @@ RESTful API with a single endpoint that fetches the data in the provided MongoDB
 
 I followed the onion architecture in my application, splited the application to separate layers.
 
+![onion](https://user-images.githubusercontent.com/12202990/149899861-8f00f456-9f7a-4b5d-86f7-4ad15b720393.jpeg)
+
 - I used Inversify for dependancy injection.
 - MongoDB for storing the data with a generice interface which can be extended to implement more data sources in the future (memory, redis ... etc).
 - Jest for unit and integration tests.
